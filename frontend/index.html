@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Code Intelligence & Optimization</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container app">
+
+  <!-- HEADER -->
+  <header class="text-center mb-5">
+    <h1>Code Intelligence & Optimization</h1>
+    <p class="subtitle">Analyze • Understand • Optimize</p>
+  </header>
+
+  <!-- CODE EDITOR -->
+  <section class="glass mb-4">
+    <h5 class="section-title">Code Editor</h5>
+    <textarea
+      id="codeInput"
+      rows="10"
+      spellcheck="false"
+      placeholder="write code here"></textarea>
+
+    <button class="analyze-btn mt-3" onclick="analyzeCode()">
+      Analyze Code
+    </button>
+  </section>
+
+  <!-- ANALYSIS SUMMARY -->
+  <section class="glass mb-4">
+    <h5 class="section-title">Analysis Summary</h5>
+
+    <div class="stats">
+      <div class="stat">
+        <span>Complexity</span>
+        <strong id="complexity">–</strong>
+      </div>
+      <div class="stat">
+        <span>Risk</span>
+        <strong id="risk">–</strong>
+      </div>
+      <div class="stat">
+        <span>Loops</span>
+        <strong id="loops">–</strong>
+      </div>
+      <div class="stat">
+        <span>Conditions</span>
+        <strong id="conditions">–</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- ISSUES -->
+  <section class="glass mb-4">
+    <h5 class="section-title">Issues & Insights</h5>
+    <ul id="issues" class="muted">
+      <li>Run analysis to see insights</li>
+    </ul>
+  </section>
+
+  <!-- OPTIMIZATION VARIANTS -->
+  <section class="glass mb-4">
+    <h5 class="section-title">Optimization Variants</h5>
+
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab(0)">Readability</button>
+      <button class="tab" onclick="switchTab(1)">Performance</button>
+      <button class="tab" onclick="switchTab(2)">Maintainability</button>
+    </div>
+
+    <pre id="optimizedCode">// Optimized code will appear here</pre>
+  </section>
+
+  <!-- EXPLANATION -->
+  <section class="glass mb-5">
+    <h5 class="section-title">Explanation</h5>
+    <p id="explanation" class="muted">
+      Explanation will appear after analysis
+    </p>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.env
+bug_predictor.pkl
+.DS_Store
+
+

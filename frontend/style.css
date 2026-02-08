@@ -1,0 +1,136 @@
+* {
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle at top, #1b1f3b, #0d1117);
+  color: #e6edf3;
+}
+
+.app {
+  max-width: 900px;
+  padding-top: 40px;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #9ba3b4;
+  font-size: 0.95rem;
+}
+
+/* GLASS CARD */
+.glass {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 22px;
+  border: 1px solid #30363d;
+}
+
+/* SECTION TITLES (FIXED VISIBILITY) */
+.section-title {
+  color: #e6edf3;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  margin-bottom: 14px;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 2px;
+  background: linear-gradient(90deg, #58a6ff, #1f6feb);
+  margin-top: 6px;
+  border-radius: 2px;
+}
+
+/* TEXTAREA */
+textarea {
+  width: 100%;
+  background: #0d1117;
+  color: #e6edf3;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 14px;
+  font-family: monospace;
+  resize: none;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #58a6ff;
+}
+
+/* BUTTON */
+.analyze-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #58a6ff, #1f6feb);
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+}
+
+/* STATS */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.stat {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+}
+
+.stat span {
+  display: block;
+  font-size: 0.75rem;
+  color: #8b949e;
+}
+
+/* TABS */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.tab {
+  flex: 1;
+  background: #161b22;
+  border: 1px solid #30363d;
+  color: #8b949e;
+  padding: 6px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.tab.active {
+  color: #58a6ff;
+  border-color: #58a6ff;
+}
+
+/* CODE BLOCK */
+pre {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 14px;
+  max-height: 300px;
+  overflow: auto;
+}
+
+/* MUTED TEXT */
+.muted {
+  color: #8b949e;
+}
